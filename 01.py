@@ -155,15 +155,82 @@ person["age"] = 31
 del person["city"]
 
 # Checking if a key exists
+#aviable
 if "email" in person:
     print("Email is present")
 
 # Iterating through the dictionary
-for key, value in person.items():
-    print(f"{key}: {value}")
 
 
 
-#map and filter
+#day 5
+# Define a list
+fruits = ['apple', 'banana', 'cherry']
 
+# Indexing
+print("Indexing:")
+print(fruits[0])  # Output: apple
+print(fruits[-1])  # Output: cherry
 
+# Slicing
+print("\nSlicing:")
+print(fruits[0:2])  # Output: ['apple', 'banana']
+print(fruits[1:])  # Output: ['banana', 'cherry']
+
+# Changing Items
+print("\nChanging Items:")
+fruits[1] = 'blueberry'
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry']
+
+# Adding Items
+print("\nAdding Items:")
+fruits.append('date')
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry', 'date']
+fruits.extend(['elderberry', 'fig'])
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry', 'date', 'elderberry', 'fig']
+
+# Removing Items
+print("\nRemoving Items:")
+fruits.remove('blueberry')
+print(fruits)  # Output: ['apple', 'cherry', 'date', 'elderberry', 'fig']
+last_fruit = fruits.pop()
+print(last_fruit)  # Output: fig
+print(fruits)  # Output: ['apple', 'cherry', 'date', 'elderberry']
+del fruits[1]
+print(fruits)  # Output: ['apple', 'date', 'elderberry']
+
+# Looping
+print("\nLooping:")
+for fruit in fruits:
+    print(fruit)
+# Output:
+# apple
+# date
+# elderberry
+
+# Copying
+print("\nCopying:")
+fruits_copy = fruits.copy()
+print(fruits_copy)  # Output: ['apple', 'date', 'elderberry']
+
+# List Comprehension
+print("\nList Comprehension:")
+uppercased_fruits = [fruit.upper() for fruit in fruits]
+print(uppercased_fruits)  # Output: ['APPLE', 'DATE', 'ELDERBERRY']
+
+# Sorting
+print("\nSorting:")
+fruits.sort()
+print(fruits)  # Output: ['apple', 'date', 'elderberry']
+fruits.sort(reverse=True)
+print(fruits)  # Output: ['elderberry', 'date', 'apple']
+
+# Joining
+print("\nJoining:")
+fruits_str = ', '.join(fruits)
+print(fruits_str)  # Output: elderberry, date, apple
+
+# Boolean Operations
+print("\nBoolean Operations:")
+print('apple' in fruits)  # Output: True
+print('banana' not in fruits)  # Output: True
